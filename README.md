@@ -3,7 +3,7 @@
 [![tag](https://img.shields.io/github/release/justjavac/deno-murmurhash)](https://github.com/justjavac/deno-murmurhash/releases)
 [![Build Status](https://github.com/justjavac/deno-murmurhash/workflows/ci/badge.svg?branch=master)](https://github.com/justjavac/deno-murmurhash/actions)
 [![license](https://img.shields.io/github/license/justjavac/deno-murmurhash)](https://github.com/justjavac/deno-murmurhash/blob/master/LICENSE)
-[![](https://img.shields.io/badge/deno-v0.25.0-green.svg)](https://github.com/denoland/deno)
+[![](https://img.shields.io/badge/deno-v0.26.0-green.svg)](https://github.com/denoland/deno)
 
 > An incremental implementation of MurmurHash3 for JavaScript
 
