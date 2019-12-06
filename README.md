@@ -20,20 +20,22 @@ than concatenating 5-10 strings and then hashing.
 ```ts
 import Murmurhash3 from "https://deno.land/x/murmurhash/mod.ts";
 
-const hash = MurmurHash3('string');
+const hash = MurmurHash3("string");
 
 // Incrementally add text
-hash.hash('more strings');
-hash.hash('even more strings');
+hash.hash("more strings");
+hash.hash("even more strings");
 
 // All calls can be chained if desired
-hash.hash('and').hash('some').hash('more');
+hash
+  .hash("and")
+  .hash("some")
+  .hash("more");
 
 // Get a result
 hash.result();
 // returns 0xe4ccfe6b
 ```
-
 
 ## API
 
@@ -62,14 +64,14 @@ This means that it is perfectly safe to get results and then continue adding str
 
 ```ts
 // Do the whole string at once
-new MurmurHash3('this is a test string').result();
+new MurmurHash3("this is a test string").result();
 // 0x70529328
 
 // Do part of the string, get a result, then the other part
-const m = MurmurHash3('this is a');
+const m = MurmurHash3("this is a");
 m.result();
 // 0xbfc4f834
-m.hash(' test string').result();
+m.hash(" test string").result();
 // 0x70529328 (same as above)
 ```
 
