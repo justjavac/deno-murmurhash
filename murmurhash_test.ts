@@ -1,9 +1,8 @@
-import { test } from "https://deno.land/std@v0.24.0/testing/mod.ts";
-import { assertEquals } from "https://deno.land/std@v0.24.0/testing/asserts.ts";
+import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
 
 import Murmurhash3 from "./mod.ts";
 
-test({
+Deno.test({
   name: "murmurhash3",
   fn(): void {
     const murmurhash3 = new Murmurhash3("foo");
@@ -15,5 +14,5 @@ test({
     assertEquals(murmurhash3.result(), 171088983);
     const murmurhash3_1 = new Murmurhash3("foo bar");
     assertEquals(murmurhash3_1.result(), 171088983);
-  }
+  },
 });
