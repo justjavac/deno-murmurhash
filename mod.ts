@@ -13,10 +13,10 @@
  * JS Implementation of incremental MurmurHash3 (r150) (as of May 10, 2013)
  */
 export default class MurmurHash3 {
-  private len: number;
-  private rem: number;
-  private h1: number;
-  private k1: number;
+  private len!: number;
+  private rem!: number;
+  private h1!: number;
+  private k1!: number;
 
   /**
    * Create a MurmurHash3 object for incremental hashing.
@@ -73,8 +73,7 @@ export default class MurmurHash3 {
           break;
         }
 
-        k1 =
-          (key.charCodeAt(i++) & 0xffff) ^
+        k1 = (key.charCodeAt(i++) & 0xffff) ^
           ((key.charCodeAt(i++) & 0xffff) << 8) ^
           ((key.charCodeAt(i++) & 0xffff) << 16);
         top = key.charCodeAt(i++);
